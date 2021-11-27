@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --grey: rgb(221, 221, 221);
+  --white: white;
+  --green: green;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ///////////////// */
+
+#main-doc {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  height: auto;
+  padding: 100px 0;
+  /* background-color: red; */
+}
+
+.side-nav {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 300px;
+  height: auto;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0;
+  row-gap: 50px;
+}
+
+.side-nav a {
+  width: 80%;
+  padding: 30px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  border-top: 2px solid var(--green);
+  border-bottom: 2px solid var(--green);
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  max-width: calc(100vw - 300px);
+  height: auto;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  padding-bottom: 100px;
+  row-gap: 80px;
+}
+
+/* ////////////////////// */
+
+.main-content section header {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.main-content section p {
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+
+.main-content section:nth-child(2),
+.main-content section:nth-child(4) {
+  padding: 50px;
+}
+
+.main-content section:nth-child(1),
+.main-content section:nth-child(3),
+.main-content section:nth-child(5) {
+  background-color: var(--grey);
+  padding: 50px;
+}
+
+#IT_world ul {
+  padding-left: 100px;
+}
+
+#IT_world ul li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .side-nav {
+    width: 200px;
+  }
+  .side-nav a {
+    font-size: 1rem;
+  }
+
+  .main-content {
+    left: 250px;
+    max-width: calc(100vw - 250px);
+  }
+}
+
+@media (max-width: 850px) {
+  .side-nav a {
+    width: 100px;
+    text-align: center;
+  }
+  .side-nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: auto;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    padding: 50px 50px;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main-content {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    max-width: 100vw;
+    height: auto;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    row-gap: 80px;
+  }
+}
+
+
+.author {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: black;
+    padding-bottom: 50px;
+    padding-right: 30px;
+}
